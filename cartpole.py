@@ -81,8 +81,9 @@ class dqn():
         })[0])
 
 def main():
-    # ENV_NAME = 'CartPole-v0'
-    ENV_NAME = 'MountainCar-v0'
+    ENV_NAME = 'CartPole-v0'
+    # ENV_NAME = 'MountainCar-v0'
+    #ENV_NAME = 'FrozenLake-v0'
     max_iter = 300
     max_epoch = 10000
     TEST = 10
@@ -123,7 +124,7 @@ def main():
                         break
             avg_reward = total_reward/TEST
             print("Epoch: ", epoch, "avg_reward: ", avg_reward)
-            if avg_reward >= 400:
+            if avg_reward >= 200:
                 break
 
 if __name__ == '__main__':
